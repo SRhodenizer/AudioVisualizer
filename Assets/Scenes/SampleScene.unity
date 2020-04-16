@@ -1433,7 +1433,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dcbd6434ca95a2749891f948d81ebade, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1e1dd755a965ccf439b37087934e7be3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.07
   m_Pitch: 1
@@ -1787,13 +1787,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.22655468, y: -0, z: -0, w: 0.9739985}
-  m_LocalPosition: {x: 0, y: 22, z: -116.1}
+  m_LocalRotation: {x: 0, y: 0.9739978, z: -0.22655782, w: 0}
+  m_LocalPosition: {x: 0, y: 26, z: 120}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 26.189001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.189, y: 180, z: 0}
 --- !u!1001 &1027992408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2075,7 +2075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205554234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.428741, y: -11.085251, z: -6.5}
+  m_LocalPosition: {x: 17.428741, y: -11.085251, z: 78.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 643693621}
@@ -2298,7 +2298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262999138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.8, y: 3.1427364, z: -71.2}
+  m_LocalPosition: {x: 52, y: 3, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2429,7 +2429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280388943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.5, y: 3.1427364, z: -71.2}
+  m_LocalPosition: {x: -52, y: 3, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2600,6 +2600,7 @@ MonoBehaviour:
   startScale: 5
   scaleMultiplier: 6
   band: 3
+  posY: 90
 --- !u!1 &1473752094
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,7 +3306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055327929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.428741, y: -11.085251, z: -22.2}
+  m_LocalPosition: {x: 17.428741, y: -11.085251, z: 63.100006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 909344781}
