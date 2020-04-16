@@ -15,6 +15,9 @@ public class AudioPeer : MonoBehaviour
     public static float[] audioBand = new float[8];
     public static float[] audioBandBuffer = new float[8];
 
+    public static float amplitude, amplitudeBuffer;
+    float amplitudeHighest;
+
     //array of audio tracks
     public AudioClip[] tracks = new AudioClip[5];
     //which audio track is currently playing 
@@ -33,6 +36,7 @@ public class AudioPeer : MonoBehaviour
         MakeFrequencyBands();
         BandBuffer();
         CreateAudioBands();
+        GetAmplitude();
     }
 
     void GetSpectrumAudioSource()
@@ -122,11 +126,32 @@ public class AudioPeer : MonoBehaviour
         }
     }
 
+    void GetAmplitude()
+    {
+        float currAmp = 0;
+        float currBuff = 0;
+        for (int i = 0; i < audioBand.Length; i++)
+        {
+            currAmp += audioBand[i];
+            currBuff += audioBandBuffer[i];
+        }
+
+        if (currAmp > amplitudeHighest)
+        {
+            amplitudeHighest = currAmp;
+        }
+
+        amplitude = currAmp / amplitudeHighest;
+        amplitudeBuffer = currBuff / amplitudeHighest;
+    }
+
     private void OnGUI()
     {
         if (GUI.Button(new Rect(10, 70, 50, 30), "Change Track")) {
+            //up the track
             currTrack++;
             audioSource.clip = tracks[currTrack % 5];
+            //make sure it's playing 
             audioSource.Play();
         }
     }
