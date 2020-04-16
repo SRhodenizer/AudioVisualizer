@@ -18,6 +18,7 @@ public class ParamCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (useBuffer)
         {
             transform.localScale = new Vector3(transform.localScale.x, (AudioPeer.audioBandBuffer[band] * scaleMultiplier) + startScale, transform.localScale.z);

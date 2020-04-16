@@ -1416,6 +1416,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e70144dc7c9bb4b86df1e913a8ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tracks:
+  - {fileID: 8300000, guid: 1e1dd755a965ccf439b37087934e7be3, type: 3}
+  - {fileID: 8300000, guid: 415c8bac212ca9d45a8ccef756a04e4c, type: 3}
+  - {fileID: 8300000, guid: 65f41bb39756fc64c89c74563cf5afde, type: 3}
+  - {fileID: 8300000, guid: 9b71da08d71750d48bc0005bba74e2df, type: 3}
+  - {fileID: 8300000, guid: d88c617a1925c7c42ac73fa710266a29, type: 3}
+  currTrack: 0
 --- !u!82 &789366512
 AudioSource:
   m_ObjectHideFlags: 0

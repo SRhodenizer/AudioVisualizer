@@ -15,6 +15,11 @@ public class AudioPeer : MonoBehaviour
     public static float[] audioBand = new float[8];
     public static float[] audioBandBuffer = new float[8];
 
+    //array of audio tracks
+    public AudioClip[] tracks = new AudioClip[5];
+    //which audio track is currently playing 
+    public int currTrack = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -114,6 +119,15 @@ public class AudioPeer : MonoBehaviour
 
             audioBand[i] = (freqBands[i] / freqBandHigh[i]);
             audioBandBuffer[i] = (bandsBuffer[i] / freqBandHigh[i]);
+        }
+    }
+
+    private void OnGUI()
+    {
+        if (GUI.Button(new Rect(10, 70, 50, 30), "Change Track")) {
+            currTrack++;
+            audioSource.clip = tracks[currTrack % 5];
+            audioSource.Play();
         }
     }
 }
