@@ -19,7 +19,7 @@ public class AudioPeer : MonoBehaviour
     float amplitudeHighest;
 
     //array of audio tracks
-    public AudioClip[] tracks = new AudioClip[5];
+    public AudioClip[] tracks = new AudioClip[8];
     //which audio track is currently playing 
     public int currTrack = 0;
 
@@ -150,9 +150,18 @@ public class AudioPeer : MonoBehaviour
         if (GUI.Button(new Rect(10, 70, 50, 30), "Change Track")) {
             //up the track
             currTrack++;
-            audioSource.clip = tracks[currTrack % 5];
+            audioSource.clip = tracks[currTrack % 8];
             //make sure it's playing 
             audioSource.Play();
+
+            if((currTrack % 8) <= 4)
+            {
+                GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
+            }
+            else
+            {
+                GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
+            }
         }
     }
 }

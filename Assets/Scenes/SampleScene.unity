@@ -1422,6 +1422,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 65f41bb39756fc64c89c74563cf5afde, type: 3}
   - {fileID: 8300000, guid: 9b71da08d71750d48bc0005bba74e2df, type: 3}
   - {fileID: 8300000, guid: d88c617a1925c7c42ac73fa710266a29, type: 3}
+  - {fileID: 8300000, guid: 5cc610afdfbfeeb49a9fabc4e5db9de4, type: 3}
+  - {fileID: 8300000, guid: 37f0051665c51dc4c80771bb572377e9, type: 3}
+  - {fileID: 8300000, guid: ac2510999652e114cbc523f202f93e19, type: 3}
   currTrack: 0
 --- !u!82 &789366512
 AudioSource:
