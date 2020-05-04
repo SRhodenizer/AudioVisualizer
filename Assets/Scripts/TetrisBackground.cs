@@ -16,7 +16,7 @@ public class TetrisBackground : MonoBehaviour
     public float startScale, scaleMultiplier;
     public int band;
 
-    public float posY = 10;
+    public float posY = 20;
 
     // Start is called before the first frame update
     void Start()

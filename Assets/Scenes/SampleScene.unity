@@ -544,7 +544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326584536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00054078863, y: 0.8788579, z: -1.4703628}
+  m_LocalPosition: {x: -0.00054078863, y: 0.87885845, z: -1.4703631}
   m_LocalScale: {x: 0.1398072, y: 0.13980725, z: 0.18123128}
   m_Children: []
   m_Father: {fileID: 563675341}
@@ -2879,6 +2879,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleImage: {fileID: 563675337}
   spotLight: {fileID: 326584537}
+  scoutFly: {fileID: 2131785708385765533, guid: b9d45ec57256a9246b8bea222b0338a0,
+    type: 3}
+  posY: 10
 --- !u!1 &1473752094
 GameObject:
   m_ObjectHideFlags: 0
