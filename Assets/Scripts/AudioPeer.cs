@@ -30,6 +30,10 @@ public class AudioPeer : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.loop = true;
         audioSource.clip = tracks[0];
+        songName = "<size=50><color=#ffffff>" + tracks[currTrack % 7].name + "</color></size>";
+        GUIStyle style = new GUIStyle();
+        style.richText = true;
+        GUILayout.Label(songName, style);
     }
 
     // Update is called once per frame
