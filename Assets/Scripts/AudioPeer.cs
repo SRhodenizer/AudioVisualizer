@@ -166,6 +166,13 @@ public class AudioPeer : MonoBehaviour
             }
             else
             {
+                GameObject[] blockArray = GameObject.FindGameObjectsWithTag("tetronimo");
+
+                for (int i = 0; i < blockArray.Length; i++)
+                {
+                    Destroy(blockArray[i]);
+                }
+
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
                 GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Active();
             }

@@ -7,6 +7,9 @@ public class TetrisBackground : MonoBehaviour
     [SerializeField]
     private GameObject[] tetronimos = new GameObject[7];
 
+    [SerializeField]
+    private GameObject[] spheres = new GameObject[2];
+
     private Material mat;
     private int timerCount = 0;
 
@@ -19,6 +22,8 @@ public class TetrisBackground : MonoBehaviour
     void Start()
     {
         // mat = GetComponent<MeshRenderer>().materials[0];
+        // sphereRight = GameObject.Find("SphereRight");
+        // sphereLeft = GameObject.Find("SphereLeft");
     }
 
 
@@ -39,14 +44,25 @@ public class TetrisBackground : MonoBehaviour
             block.AddComponent<Rigidbody>();
             block.AddComponent<Destroyer>();
             block.transform.localScale = block.transform.localScale * scaleMultiplier;
+            block.tag = "tetronimo";
             // block.transform.localScale = new Vector3(transform.localScale.x * scaleMultiplier + startScale, (AudioPeer.audioBandBuffer[band] * scaleMultiplier) + startScale, transform.localScale.z * scaleMultiplier + startScale);
 
-            /*
-            if (block.transform.position.y <= -10.0f)
+        }
+
+        if((timerCount % (Mathf.Floor(AudioPeer.amplitude * 500))) == 0)
+        {
+            for(int i = 0; i < spheres.Length; i++)
             {
-                Destroy(block);
+                for (int j = 0; j < tetronimos.Length; j++)
+                {
+                    GameObject block = Instantiate(tetronimos[j], spheres[i].transform.position, Quaternion.identity);
+                    block.AddComponent<Rigidbody>();
+                    block.AddComponent<Destroyer>();
+                    block.transform.localScale = block.transform.localScale * scaleMultiplier;
+                    block.tag = "tetronimo";
+                }
             }
-            */
+            
         }
 
         timerCount++;
