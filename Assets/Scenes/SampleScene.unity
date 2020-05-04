@@ -8565,6 +8565,35 @@ MonoBehaviour:
   - {fileID: 6705948225007479219, guid: 4a00a5701004bee4d9c93201d8c21630, type: 3}
   - {fileID: 5140147592810531431, guid: ce86b960787e90d4a90f3c291b410004, type: 3}
   - {fileID: 3177535860905965311, guid: b22b9caccf0636944ad527f587e10a46, type: 3}
+  tetroSphere:
+  - {fileID: 698235781}
+  - {fileID: 1296277860}
+  - {fileID: 507398577}
+  - {fileID: 398937763}
+  - {fileID: 1037113290}
+  - {fileID: 708400022}
+  - {fileID: 1025467843}
+  - {fileID: 263660889}
+  - {fileID: 735321131}
+  - {fileID: 1469988322}
+  - {fileID: 1682343197}
+  - {fileID: 1171487450}
+  - {fileID: 1989229638}
+  - {fileID: 527213006}
+  - {fileID: 4679926633201811375}
+  - {fileID: 3733745099922274782}
+  - {fileID: 1502084851733135554}
+  - {fileID: 7488342334394428608}
+  - {fileID: 8792727204161577541}
+  - {fileID: 5848648601541913808}
+  - {fileID: 4802904214717931336}
+  - {fileID: 476381527}
+  - {fileID: 1988867123}
+  - {fileID: 1819878608}
+  - {fileID: 1507938817}
+  - {fileID: 377033883}
+  - {fileID: 1981490723}
+  - {fileID: 729065666}
   startScale: 5
   scaleMultiplier: 2
   band: 3
