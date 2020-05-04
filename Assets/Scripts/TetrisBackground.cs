@@ -30,7 +30,7 @@ public class TetrisBackground : MonoBehaviour
         // Color color = new Color(AudioPeer.audioBandBuffer[band], AudioPeer.audioBandBuffer[band], AudioPeer.audioBandBuffer[band]);
         // mat.SetColor("_EmissionColor", color);
 
-        Debug.Log("Amp: " + (Mathf.Floor(AudioPeer.amplitude * 300)));
+        //Debug.Log("Amp: " + (Mathf.Floor(AudioPeer.amplitude * 300)));
         // int temp = (Mathf.RoundToInt(AudioPeer.amplitude / 10));
         if ((timerCount % (Mathf.Floor(AudioPeer.amplitude * 300))) == 0)
         {

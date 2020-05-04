@@ -28,6 +28,8 @@ public class AudioPeer : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
+        audioSource.clip = tracks[0];
     }
 
     // Update is called once per frame
@@ -155,19 +157,19 @@ public class AudioPeer : MonoBehaviour
             //make sure it's playing 
             audioSource.Play();
 
-            if((currTrack % 7) <= 4)
+            songName = "<size = 100><color = white> " + tracks[currTrack % 7].name + " </color></size>";
+
+            if ((currTrack % 7) <= 4)
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
-                songName = tracks[currTrack % 7].name;
             }
             else
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
-                songName = tracks[currTrack % 7].name;
             }
         }
 
-        if(GUI.Button(new Rect(10, 110, 100, 30), "Pause/Play"))
+        if (GUI.Button(new Rect(10, 110, 100, 30), "Pause/Play"))
         {
             if (audioSource.isPlaying)
             {
@@ -177,9 +179,11 @@ public class AudioPeer : MonoBehaviour
             {
                 audioSource.Play();
             }
-            
+
         }
 
-        GUI.TextField(new Rect(500, 70, 500, 70), songName);
+        GUIStyle style = new GUIStyle();
+        style.richText = true;
+        GUILayout.Label(songName, style);
     }
 }
