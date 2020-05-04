@@ -163,6 +163,7 @@ public class AudioPeer : MonoBehaviour
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
                 GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Inactive();
+                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().enabled = false;
 
                 GameObject[] flyArray = GameObject.FindGameObjectsWithTag("scoutFly");
 
@@ -182,6 +183,7 @@ public class AudioPeer : MonoBehaviour
 
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
                 GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Active();
+                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().enabled = true;
             }
         }
 

@@ -53,5 +53,6 @@ public class MonsterHunterBackground : MonoBehaviour
         fly.AddComponent<Rigidbody>();
         fly.AddComponent<Destroyer>();
         fly.tag = "scoutFly";
+        fly.transform.localScale = fly.transform.localScale * 2.0f;
     }
 }
