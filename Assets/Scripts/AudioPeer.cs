@@ -33,7 +33,16 @@ public class AudioPeer : MonoBehaviour
         songName = "<size=50><color=#ffffff>" + tracks[currTrack % 7].name + "</color></size>";
         GUIStyle style = new GUIStyle();
         style.richText = true;
-        GUILayout.Label(songName, style);
+        if (!audioSource.isPlaying) {
+            audioSource.Play();
+        }
+
+        GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
+        GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Inactive();
+        GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().Active();
+        GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().enabled = false;
+        GameObject.Find("SphereRight").GetComponent<MeshRenderer>().enabled = false;
+        GameObject.Find("SphereLeft").GetComponent<MeshRenderer>().enabled = false;
     }
 
     // Update is called once per frame
