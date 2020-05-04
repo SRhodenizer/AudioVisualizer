@@ -6,6 +6,8 @@ TagManager:
   tags:
   - tetronimo
   - scoutFly
+  - tetronimoNC
+  - monster
   layers:
   - Default
   - TransparentFX
