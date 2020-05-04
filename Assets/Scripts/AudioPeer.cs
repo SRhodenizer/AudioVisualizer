@@ -181,12 +181,14 @@ public class AudioPeer : MonoBehaviour
                     tetronimoSphere[i].SetActive(true);
                 }
 
+                /*
                 GameObject[] monsters = GameObject.FindGameObjectsWithTag("monster");
 
                 for(int i = 0; i < monsters.Length; i++)
                 {
                     monsters[i].SetActive(false);
                 }
+                */
             }
             else
             {
@@ -204,12 +206,14 @@ public class AudioPeer : MonoBehaviour
                     tetronimoSphere[i].SetActive(false);
                 }
 
+                /*
                 GameObject[] monsters = GameObject.FindGameObjectsWithTag("monster");
 
                 for (int i = 0; i < monsters.Length; i++)
                 {
                     monsters[i].SetActive(true);
                 }
+                */
 
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
                 GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Active();

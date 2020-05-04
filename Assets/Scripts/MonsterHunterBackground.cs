@@ -32,7 +32,7 @@ public class MonsterHunterBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((timerCount % (Mathf.Floor(AudioPeer.amplitude * 300))) == 0)
+        if((timerCount % (Mathf.Floor(AudioPeer.amplitude * 250))) == 0)
         {
             SpawnScoutFlies();
         }
@@ -54,12 +54,22 @@ public class MonsterHunterBackground : MonoBehaviour
     {
         titleImage.SetActive(true);
         spotLight.enabled = true;
+
+        for(int i = 0; i < monsters.Length; i++)
+        {
+            monsters[i].SetActive(true);
+        }
     }
 
     public void Inactive()
     {
         titleImage.SetActive(false);
         spotLight.enabled = false;
+
+        for (int i = 0; i < monsters.Length; i++)
+        {
+            monsters[i].SetActive(false);
+        }
     }
 
     void SpawnScoutFlies()
