@@ -157,7 +157,7 @@ public class AudioPeer : MonoBehaviour
             //make sure it's playing 
             audioSource.Play();
 
-            songName = "<size = 100><color = white> " + tracks[currTrack % 7].name + " </color></size>";
+            songName = "<size=50><color=#ffffff>" + tracks[currTrack % 7].name + "</color></size>";
 
             if ((currTrack % 7) <= 4)
             {
