@@ -151,19 +151,19 @@ public class AudioPeer : MonoBehaviour
         if (GUI.Button(new Rect(10, 70, 100, 30), "Change Track")) {
             //up the track
             currTrack++;
-            audioSource.clip = tracks[currTrack % 8];
+            audioSource.clip = tracks[currTrack % 7];
             //make sure it's playing 
             audioSource.Play();
 
-            if((currTrack % 8) <= 4)
+            if((currTrack % 7) <= 4)
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
-                songName = tracks[currTrack % 8].name;
+                songName = tracks[currTrack % 7].name;
             }
             else
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
-                songName = tracks[currTrack % 8].name;
+                songName = tracks[currTrack % 7].name;
             }
         }
 
