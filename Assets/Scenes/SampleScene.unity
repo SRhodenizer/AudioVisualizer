@@ -543,12 +543,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326584536}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -57.8, y: 123.9, z: -30.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00054078863, y: 0.8788579, z: -1.4703628}
+  m_LocalScale: {x: 0.1398072, y: 0.13980725, z: 0.18123128}
   m_Children: []
-  m_Father: {fileID: 1486559474}
-  m_RootOrder: 1
+  m_Father: {fileID: 563675341}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &326584539
 MonoBehaviour:
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 563675339}
   - component: {fileID: 563675338}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: MHWbackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -990,9 +990,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563675337}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 37.3, z: -13.8}
+  m_LocalPosition: {x: 0, y: 16.4, z: -2.8}
   m_LocalScale: {x: 7.152708, y: 7.152708, z: 5.5178137}
-  m_Children: []
+  m_Children:
+  - {fileID: 326584538}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -2799,6 +2800,7 @@ GameObject:
   - component: {fileID: 1462478679}
   - component: {fileID: 1462478678}
   - component: {fileID: 1462478680}
+  - component: {fileID: 1462478681}
   m_Layer: 0
   m_Name: Instantiate Cubes
   m_TagString: Untagged
@@ -2860,6 +2862,20 @@ MonoBehaviour:
   scaleMultiplier: 6
   band: 3
   posY: 90
+--- !u!114 &1462478681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462478677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea4cffd7ccb71345b406dcf5a3d80b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleImage: {fileID: 563675337}
+  spotLight: {fileID: 326584537}
 --- !u!1 &1473752094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,7 +2937,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1060442839}
-  - {fileID: 326584538}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
