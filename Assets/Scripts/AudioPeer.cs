@@ -162,10 +162,12 @@ public class AudioPeer : MonoBehaviour
             if ((currTrack % 7) <= 4)
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
+                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Inactive();
             }
             else
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
+                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Active();
             }
         }
 
