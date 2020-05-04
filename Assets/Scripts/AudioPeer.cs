@@ -163,27 +163,33 @@ public class AudioPeer : MonoBehaviour
 
             songName = "<size=50><color=#ffffff>" + tracks[currTrack % 7].name + "</color></size>";
 
+            Debug.Log("CurrTrack: " + (currTrack % 7));
+
             if ((currTrack % 7) <= 4)
             {
-                GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
-                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Inactive();
-                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().enabled = false;
-                GameObject.Find("SphereRight").GetComponent<MeshRenderer>().enabled = false;
-                GameObject.Find("SphereLeft").GetComponent<MeshRenderer>().enabled = false;
-
                 GameObject[] flyArray = GameObject.FindGameObjectsWithTag("scoutFly");
 
                 for(int i = 0; i < flyArray.Length; i++)
                 {
                     Destroy(flyArray[i]);
                 }
-
+                /*
                 GameObject[] tetronimoSphere = GameObject.FindGameObjectsWithTag("tetronimoNC");
 
-                for(int i = 0; i < tetronimoSphere.Length; i++)
+                Debug.Log("setting true");
+
+                for (int i = 0; i < tetronimoSphere.Length; i++)
                 {
                     tetronimoSphere[i].SetActive(true);
                 }
+                */
+                
+                GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
+                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Inactive();
+                GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().Active();
+                GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().enabled = false;
+                GameObject.Find("SphereRight").GetComponent<MeshRenderer>().enabled = false;
+                GameObject.Find("SphereLeft").GetComponent<MeshRenderer>().enabled = false;
 
                 /*
                 GameObject[] monsters = GameObject.FindGameObjectsWithTag("monster");
@@ -221,6 +227,7 @@ public class AudioPeer : MonoBehaviour
 
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
                 GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().Active();
+                GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().Inactive();
                 GameObject.Find("Instantiate Cubes").GetComponent<MonsterHunterBackground>().enabled = true;
                 GameObject.Find("SphereRight").GetComponent<MeshRenderer>().enabled = true;
                 GameObject.Find("SphereLeft").GetComponent<MeshRenderer>().enabled = true;

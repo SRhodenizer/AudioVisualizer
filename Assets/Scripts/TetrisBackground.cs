@@ -7,6 +7,9 @@ public class TetrisBackground : MonoBehaviour
     [SerializeField]
     private GameObject[] tetronimos = new GameObject[7];
 
+    [SerializeField]
+    private GameObject[] tetroSphere = new GameObject[27];
+
     private Material mat;
     private int timerCount = 0;
     
@@ -44,5 +47,21 @@ public class TetrisBackground : MonoBehaviour
 
         }
         timerCount++;
+    }
+
+    public void Active()
+    {
+        for(int i = 0; i < tetroSphere.Length; i++)
+        {
+            tetroSphere[i].SetActive(true);
+        }
+    }
+
+    public void Inactive()
+    {
+        for (int i = 0; i < tetroSphere.Length; i++)
+        {
+            tetroSphere[i].SetActive(false);
+        }
     }
 }
