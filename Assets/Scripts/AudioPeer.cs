@@ -10,6 +10,7 @@ public class AudioPeer : MonoBehaviour
     private float[] bandsBuffer = new float[8];
     private float[] bufferDecrease = new float[8];
     private float[] freqBandHigh = new float[8];
+    private string songName = "";
 
     public static float[] samples = new float[512];
     public static float[] audioBand = new float[8];
@@ -147,7 +148,7 @@ public class AudioPeer : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 70, 50, 30), "Change Track")) {
+        if (GUI.Button(new Rect(10, 70, 100, 30), "Change Track")) {
             //up the track
             currTrack++;
             audioSource.clip = tracks[currTrack % 8];
@@ -157,11 +158,28 @@ public class AudioPeer : MonoBehaviour
             if((currTrack % 8) <= 4)
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = true;
+                songName = tracks[currTrack % 8].name;
             }
             else
             {
                 GameObject.Find("Instantiate Cubes").GetComponent<TetrisBackground>().enabled = false;
+                songName = tracks[currTrack % 8].name;
             }
         }
+
+        if(GUI.Button(new Rect(10, 110, 100, 30), "Pause/Play"))
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Pause();
+            }
+            else
+            {
+                audioSource.Play();
+            }
+            
+        }
+
+        GUI.TextField(new Rect(500, 70, 500, 70), songName);
     }
 }
